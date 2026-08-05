@@ -263,48 +263,45 @@
                     Este artigo foi produzido pelo Grupo Optimus como atividade acadêmica.
                 </p>
 
-                <h3>Integrantes</h3>
-                <div class="equipe__grade">
-                    <div class="equipe__card">
-                        <img class="equipe__avatar" src="img/andre-castelhano.jpg"
-                             alt="Foto de André Luis Castelhano">
-                        <p class="equipe__nome">André Luis Castelhano</p>
+                
+                
+                <!-- Estrutura do Carrossel Centralizado -->
+                <div id="carrossel" style="position: relative; max-width: 350px; margin: 0 auto; display: flex; align-items: center; justify-content: center; min-height: 250px;">
+                    <!-- Botão Anterior -->
+                    <button onclick="mudarSlide(-1)" style="position:absolute; left:0; z-index:10; cursor:pointer; background:none; border:none; font-size:35px; color:#fff;">&#10094;</button>
+                    
+                    <!-- Slides Individuais (display:none ou flex, com margin auto para centralizar no flex-container) -->
+                    <div class="meu-slide equipe__card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/andre-castelhano.jpg" alt="Foto de André" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">André Luis Castelhano</p>
+                    </div>
+                    <div class="meu-slide equipe__card" style="display:none; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/caue-hanzen.jpg" alt="Foto de Cauê" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">Cauê Vergopolan Hanzen</p>
+                    </div>
+                    <div class="meu-slide equipe__card" style="display:none; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/guilherme-bonetto.jpg" alt="Foto de Guilherme" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">Guilherme da Cunha Bonetto</p>
+                    </div>
+                    <div class="meu-slide equipe__card" style="display:none; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/carlos-menger.jpg" alt="Foto de Carlos" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">Carlos Henrique da Silva Menger Neto</p>
+                    </div>
+                    <div class="meu-slide equipe__card" style="display:none; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/pedro-perdomo.jpg" alt="Foto de Pedro" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">Pedro Pimentel Perdomo</p>
+                    </div>
+                    <div class="meu-slide equipe__card equipe__card--mentora" style="display:none; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
+                        <img class="equipe__avatar" src="img/zainab-ghazaoui.jpg" alt="Foto de Zainab" style="width: 110px; height: 110px;">
+                        <p class="equipe__nome" style="font-size: 13px;">Zainab Ahmad Al Ghazaoui</p>
+                        <p class="equipe__papel" style="font-size: 12px; margin-top:5px;">Mentora</p>
                     </div>
 
-                    <div class="equipe__card">
-                        <img class="equipe__avatar" src="img/caue-hanzen.jpg"
-                             alt="Foto de Cauê Vergopolan Hanzen">
-                        <p class="equipe__nome">Cauê Vergopolan Hanzen</p>
-                    </div>
-
-                    <div class="equipe__card">
-                        <img class="equipe__avatar" src="img/guilherme-bonetto.jpg"
-                             alt="Foto de Guilherme da Cunha Bonetto">
-                        <p class="equipe__nome">Guilherme da Cunha Bonetto</p>
-                    </div>
-
-                    <div class="equipe__card">
-                        <img class="equipe__avatar" src="img/carlos-menger.jpg"
-                             alt="Foto de Carlos Henrique da Silva Menger Neto">
-                        <p class="equipe__nome">Carlos Henrique da Silva Menger Neto</p>
-                    </div>
-
-                    <div class="equipe__card">
-                        <img class="equipe__avatar" src="img/pedro-perdomo.jpg"
-                             alt="Foto de Pedro Pimentel Perdomo">
-                        <p class="equipe__nome">Pedro Pimentel Perdomo</p>
-                    </div>
+                    <!-- Botão Próximo -->
+                    <button onclick="mudarSlide(1)" style="position:absolute; right:0; z-index:10; cursor:pointer; background:none; border:none; font-size:35px; color:#fff;">&#10095;</button>
                 </div>
 
-                <h3>Mentora</h3>
-                <div class="equipe__grade">
-                    <div class="equipe__card equipe__card--mentora">
-                        <img class="equipe__avatar" src="img/zainab-ghazaoui.jpg"
-                             alt="Foto de Zainab Ahmad Al Ghazaoui">
-                        <p class="equipe__nome">Zainab Ahmad Al Ghazaoui</p>
-                        <p class="equipe__papel">Mentora</p>
-                    </div>
-                </div>
+
             </section>
 
         </article>
@@ -359,6 +356,8 @@
         </div>
     </footer>
 
+    <!-- Importando script externo do carrossel -->
+    <script src="js/carrossel.js"></script>
 </body>
 
 </html>
