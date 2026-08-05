@@ -119,14 +119,14 @@ code {
     gap: 12px;
 }
 
+/* Agora e a logo em SVG, nao mais o texto </> num quadrado vermelho.
+   O SVG ja traz o proprio fundo e contorno, entao aqui so se define
+   o tamanho. display: block tira o espaco fantasma que o navegador
+   reserva embaixo de imagens em linha e desalinharia o nome ao lado. */
 .logo__icone {
-    font-family: Consolas, "Courier New", monospace;
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #c8102e;
-    padding: 6px 10px;
-    border-radius: 8px;
+    display: block;
+    width: 44px;
+    height: 44px;
 }
 
 .logo__textos {
