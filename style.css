@@ -1,22 +1,9 @@
-/* Cozinha & Código - folha de estilo principal (tema noturno)
-
-   Paleta Optimus:
-   #060D20 fundo · #06102A destaque recuado · #0E1B3F azul Optimus
-   #16305F blocos elevados · #1F3D73 bordas
-   #FFFFFF titulos · #DCE3EC texto · #B8C4D6 secundario · #95A3BA legendas
-   #C8102E vermelho de preenchimento · #FF5A5A vermelho de texto
-   #7FA6E8 azul claro · #2B5AA8 azul medio */
-
-
-/* 1. RESET E CONFIGURACOES GLOBAIS */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Faz as barras de rolagem e os campos nativos virem no tema escuro */
 :root {
     color-scheme: dark;
 }
@@ -49,16 +36,12 @@ code {
 }
 
 
-/* 2. CONTAINER */
-
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-
-/* 3. CABECALHO E MENU DE NAVEGACAO */
 
 .cabecalho {
     background-color: #0e1b3f;
@@ -81,8 +64,6 @@ code {
     gap: 12px;
 }
 
-/* display: block tira o espaco fantasma abaixo da imagem em linha,
-   que desalinharia o nome ao lado */
 .logo__icone {
     display: block;
     width: 44px;
@@ -101,8 +82,6 @@ code {
     letter-spacing: 0.5px;
 }
 
-/* Como link, herda o branco do cabecalho em vez do vermelho padrao;
-   align-self impede que ele estique pela coluna toda */
 a.logo__nome {
     color: inherit;
     align-self: flex-start;
@@ -141,8 +120,6 @@ a.logo__nome:hover {
     text-decoration: none;
 }
 
-
-/* 4. ARTIGO */
 
 .artigo {
     background-color: #0e1b3f;
@@ -275,8 +252,6 @@ hr {
 }
 
 
-/* 5. IMAGENS E FIGURAS */
-
 .figura {
     margin: 32px 0;
 }
@@ -299,9 +274,6 @@ hr {
 }
 
 
-/* 6. BLOCOS ESPECIAIS */
-
-/* Mais escura que o artigo, para parecer recuada */
 .destaque {
     background-color: #06102a;
     color: #dce3ec;
@@ -335,7 +307,6 @@ hr {
     padding: 20px;
 }
 
-/* O cartao do algoritmo recebe a faixa azul, fechando o contraste da dupla */
 .cartao:last-child {
     border-top-color: #2b5aa8;
 }
@@ -370,7 +341,6 @@ hr {
     text-align: center;
 }
 
-/* A foto quadrada vira circulo aqui; object-fit preenche sem distorcer */
 .equipe__avatar {
     width: 72px;
     height: 72px;
@@ -382,7 +352,6 @@ hr {
     background-color: #060d20;
 }
 
-/* A mentora fica com o anel azul, os integrantes com o vermelho */
 .equipe__card--mentora .equipe__avatar {
     border-color: #2b5aa8;
 }
@@ -403,8 +372,6 @@ hr {
     margin-bottom: 0;
 }
 
-
-/* 7. RODAPE */
 
 .rodape {
     background-color: #0e1b3f;
@@ -473,8 +440,6 @@ hr {
 }
 
 
-/* 8. RESPONSIVIDADE (celular) */
-
 @media (max-width: 600px) {
 
     body {
@@ -505,6 +470,6 @@ hr {
     }
 
     p {
-        text-align: left;   /* justificado fica ruim em tela estreita */
+        text-align: left;
     }
 }
