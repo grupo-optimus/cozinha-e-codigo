@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* Cozinha & Código - folha de estilo principal (tema noturno)
 
    Paleta Optimus:
@@ -10,13 +11,18 @@
 
 /* 1. RESET E CONFIGURACOES GLOBAIS */
 
+=======
+>>>>>>> Stashed changes
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+<<<<<<< Updated upstream
 /* Faz as barras de rolagem e os campos nativos virem no tema escuro */
+=======
+>>>>>>> Stashed changes
 :root {
     color-scheme: dark;
 }
@@ -49,8 +55,11 @@ code {
 }
 
 
+<<<<<<< Updated upstream
 /* 2. CONTAINER */
 
+=======
+>>>>>>> Stashed changes
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -58,8 +67,11 @@ code {
 }
 
 
+<<<<<<< Updated upstream
 /* 3. CABECALHO E MENU DE NAVEGACAO */
 
+=======
+>>>>>>> Stashed changes
 .cabecalho {
     background-color: #0e1b3f;
     color: #ffffff;
@@ -81,8 +93,11 @@ code {
     gap: 12px;
 }
 
+<<<<<<< Updated upstream
 /* display: block tira o espaco fantasma abaixo da imagem em linha,
    que desalinharia o nome ao lado */
+=======
+>>>>>>> Stashed changes
 .logo__icone {
     display: block;
     width: 44px;
@@ -101,8 +116,11 @@ code {
     letter-spacing: 0.5px;
 }
 
+<<<<<<< Updated upstream
 /* Como link, herda o branco do cabecalho em vez do vermelho padrao;
    align-self impede que ele estique pela coluna toda */
+=======
+>>>>>>> Stashed changes
 a.logo__nome {
     color: inherit;
     align-self: flex-start;
@@ -142,8 +160,11 @@ a.logo__nome:hover {
 }
 
 
+<<<<<<< Updated upstream
 /* 4. ARTIGO */
 
+=======
+>>>>>>> Stashed changes
 .artigo {
     background-color: #0e1b3f;
     border: 1px solid #1f3d73;
@@ -275,8 +296,11 @@ hr {
 }
 
 
+<<<<<<< Updated upstream
 /* 5. IMAGENS E FIGURAS */
 
+=======
+>>>>>>> Stashed changes
 .figura {
     margin: 32px 0;
 }
@@ -299,9 +323,12 @@ hr {
 }
 
 
+<<<<<<< Updated upstream
 /* 6. BLOCOS ESPECIAIS */
 
 /* Mais escura que o artigo, para parecer recuada */
+=======
+>>>>>>> Stashed changes
 .destaque {
     background-color: #06102a;
     color: #dce3ec;
@@ -335,7 +362,10 @@ hr {
     padding: 20px;
 }
 
+<<<<<<< Updated upstream
 /* O cartao do algoritmo recebe a faixa azul, fechando o contraste da dupla */
+=======
+>>>>>>> Stashed changes
 .cartao:last-child {
     border-top-color: #2b5aa8;
 }
@@ -370,7 +400,10 @@ hr {
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 /* A foto quadrada vira circulo aqui; object-fit preenche sem distorcer */
+=======
+>>>>>>> Stashed changes
 .equipe__avatar {
     width: 72px;
     height: 72px;
@@ -382,7 +415,6 @@ hr {
     background-color: #060d20;
 }
 
-/* A mentora fica com o anel azul, os integrantes com o vermelho */
 .equipe__card--mentora .equipe__avatar {
     border-color: #2b5aa8;
 }
@@ -404,8 +436,11 @@ hr {
 }
 
 
+<<<<<<< Updated upstream
 /* 7. RODAPE */
 
+=======
+>>>>>>> Stashed changes
 .rodape {
     background-color: #0e1b3f;
     color: #c9d2dd;
@@ -473,8 +508,11 @@ hr {
 }
 
 
+<<<<<<< Updated upstream
 /* 8. RESPONSIVIDADE (celular) */
 
+=======
+>>>>>>> Stashed changes
 @media (max-width: 600px) {
 
     body {
@@ -505,6 +543,6 @@ hr {
     }
 
     p {
-        text-align: left;   /* justificado fica ruim em tela estreita */
+        text-align: left;
     }
 }
