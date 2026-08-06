@@ -1,28 +1,9 @@
-<<<<<<< Updated upstream
-/* Cozinha & Código - folha de estilo principal (tema noturno)
-
-   Paleta Optimus:
-   #060D20 fundo · #06102A destaque recuado · #0E1B3F azul Optimus
-   #16305F blocos elevados · #1F3D73 bordas
-   #FFFFFF titulos · #DCE3EC texto · #B8C4D6 secundario · #95A3BA legendas
-   #C8102E vermelho de preenchimento · #FF5A5A vermelho de texto
-   #7FA6E8 azul claro · #2B5AA8 azul medio */
-
-
-/* 1. RESET E CONFIGURACOES GLOBAIS */
-
-=======
->>>>>>> Stashed changes
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-<<<<<<< Updated upstream
-/* Faz as barras de rolagem e os campos nativos virem no tema escuro */
-=======
->>>>>>> Stashed changes
 :root {
     color-scheme: dark;
 }
@@ -55,11 +36,6 @@ code {
 }
 
 
-<<<<<<< Updated upstream
-/* 2. CONTAINER */
-
-=======
->>>>>>> Stashed changes
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -67,11 +43,6 @@ code {
 }
 
 
-<<<<<<< Updated upstream
-/* 3. CABECALHO E MENU DE NAVEGACAO */
-
-=======
->>>>>>> Stashed changes
 .cabecalho {
     background-color: #0e1b3f;
     color: #ffffff;
@@ -93,11 +64,6 @@ code {
     gap: 12px;
 }
 
-<<<<<<< Updated upstream
-/* display: block tira o espaco fantasma abaixo da imagem em linha,
-   que desalinharia o nome ao lado */
-=======
->>>>>>> Stashed changes
 .logo__icone {
     display: block;
     width: 44px;
@@ -116,11 +82,6 @@ code {
     letter-spacing: 0.5px;
 }
 
-<<<<<<< Updated upstream
-/* Como link, herda o branco do cabecalho em vez do vermelho padrao;
-   align-self impede que ele estique pela coluna toda */
-=======
->>>>>>> Stashed changes
 a.logo__nome {
     color: inherit;
     align-self: flex-start;
@@ -160,11 +121,6 @@ a.logo__nome:hover {
 }
 
 
-<<<<<<< Updated upstream
-/* 4. ARTIGO */
-
-=======
->>>>>>> Stashed changes
 .artigo {
     background-color: #0e1b3f;
     border: 1px solid #1f3d73;
@@ -296,11 +252,6 @@ hr {
 }
 
 
-<<<<<<< Updated upstream
-/* 5. IMAGENS E FIGURAS */
-
-=======
->>>>>>> Stashed changes
 .figura {
     margin: 32px 0;
 }
@@ -323,12 +274,6 @@ hr {
 }
 
 
-<<<<<<< Updated upstream
-/* 6. BLOCOS ESPECIAIS */
-
-/* Mais escura que o artigo, para parecer recuada */
-=======
->>>>>>> Stashed changes
 .destaque {
     background-color: #06102a;
     color: #dce3ec;
@@ -362,10 +307,6 @@ hr {
     padding: 20px;
 }
 
-<<<<<<< Updated upstream
-/* O cartao do algoritmo recebe a faixa azul, fechando o contraste da dupla */
-=======
->>>>>>> Stashed changes
 .cartao:last-child {
     border-top-color: #2b5aa8;
 }
@@ -400,10 +341,6 @@ hr {
     text-align: center;
 }
 
-<<<<<<< Updated upstream
-/* A foto quadrada vira circulo aqui; object-fit preenche sem distorcer */
-=======
->>>>>>> Stashed changes
 .equipe__avatar {
     width: 72px;
     height: 72px;
@@ -436,11 +373,6 @@ hr {
 }
 
 
-<<<<<<< Updated upstream
-/* 7. RODAPE */
-
-=======
->>>>>>> Stashed changes
 .rodape {
     background-color: #0e1b3f;
     color: #c9d2dd;
@@ -508,11 +440,6 @@ hr {
 }
 
 
-<<<<<<< Updated upstream
-/* 8. RESPONSIVIDADE (celular) */
-
-=======
->>>>>>> Stashed changes
 @media (max-width: 600px) {
 
     body {

@@ -3,10 +3,6 @@ let intervalo;
 
 iniciarCarrossel();
 
-<<<<<<< Updated upstream
-// n = -1 volta um slide, n = 1 avanca; o indice da a volta nas pontas
-=======
->>>>>>> Stashed changes
 function mudarSlide(n) {
     let slides = document.getElementsByClassName("meu-slide");
     if (!slides.length) return;
@@ -25,10 +21,6 @@ function iniciarCarrossel() {
     intervalo = setInterval(() => mudarSlide(1), 3000);
 }
 
-<<<<<<< Updated upstream
-// Reinicia a contagem quando o usuario clica, pra nao trocar logo em seguida
-=======
->>>>>>> Stashed changes
 function resetarIntervalo() {
     clearInterval(intervalo);
     iniciarCarrossel();
