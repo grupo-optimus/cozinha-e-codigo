@@ -1,66 +1,34 @@
-/* ============================================================
-   Cozinha & Código - Folha de estilo principal
-   Tema: NOTURNO (escuro por padrao)
+/* Cozinha & Código - folha de estilo principal (tema noturno)
 
-   PALETA OPTIMUS PRIME - MODO NOTURNO
-   Superficies, da mais escura para a mais clara:
-   #060D20  fundo da pagina / faixa de creditos
-   #06102A  caixa de destaque (recuada)
-   #0E1B3F  azul Optimus - cabecalho, artigo e rodape
-   #16305F  blocos elevados - citacao, cartoes, fichas da equipe
-   #1F3D73  bordas e divisorias
-
-   Texto e acentos:
-   #FFFFFF  titulos
-   #DCE3EC  texto corrido
-   #B8C4D6  texto secundario
-   #95A3BA  legendas e metadados
-   #C8102E  vermelho de PREENCHIMENTO (faixas, aneis, bordas)
-   #FF5A5A  vermelho de TEXTO (links, hover, destaques)
-   #7FA6E8  azul claro - subtitulos e marcadores
-   #2B5AA8  azul medio - contraponto do vermelho
-
-   Organizacao do arquivo:
-   1. Reset e configuracoes globais
-   2. Container (centralizacao e largura maxima)
-   3. Cabecalho e menu
-   4. Artigo (titulos, textos, listas, citacoes)
-   5. Imagens e figuras
-   6. Blocos especiais (destaque, cartoes, equipe)
-   7. Rodape
-   8. Responsividade
-   ============================================================ */
+   Paleta Optimus:
+   #060D20 fundo · #06102A destaque recuado · #0E1B3F azul Optimus
+   #16305F blocos elevados · #1F3D73 bordas
+   #FFFFFF titulos · #DCE3EC texto · #B8C4D6 secundario · #95A3BA legendas
+   #C8102E vermelho de preenchimento · #FF5A5A vermelho de texto
+   #7FA6E8 azul claro · #2B5AA8 azul medio */
 
 
-/* ------------------------------------------------------------
-   1. RESET E CONFIGURACOES GLOBAIS
-   ------------------------------------------------------------ */
+/* 1. RESET E CONFIGURACOES GLOBAIS */
 
-/* Zera margens e paddings padrao do navegador e faz o padding
-   ser contado DENTRO da largura dos elementos (box-sizing). */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Avisa o navegador que a pagina e escura: assim as barras de
-   rolagem e os campos nativos tambem vem no tema noturno. */
+/* Faz as barras de rolagem e os campos nativos virem no tema escuro */
 :root {
     color-scheme: dark;
 }
 
 body {
-    /* Fonte legivel, com alternativas caso a primeira nao exista */
     font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
     font-size: 17px;
     line-height: 1.75;
-    /* Fundo azul quase preto e texto prata: alto contraste para leitura */
     background-color: #060d20;
     color: #dce3ec;
 }
 
-/* Estilo padrao dos links do site */
 a {
     color: #ff5a5a;
     text-decoration: none;
@@ -71,7 +39,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Trechos de codigo dentro do texto */
 code {
     font-family: Consolas, "Courier New", monospace;
     font-size: 0.9em;
@@ -82,20 +49,16 @@ code {
 }
 
 
-/* ------------------------------------------------------------
-   2. CONTAINER: centraliza o conteudo e limita a largura
-   ------------------------------------------------------------ */
+/* 2. CONTAINER */
 
 .container {
-    max-width: 800px;   /* largura confortavel de leitura */
-    margin: 0 auto;     /* o "auto" nas laterais centraliza o bloco */
-    padding: 0 20px;    /* respiro para o conteudo nao colar na borda */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 
-/* ------------------------------------------------------------
-   3. CABECALHO E MENU DE NAVEGACAO
-   ------------------------------------------------------------ */
+/* 3. CABECALHO E MENU DE NAVEGACAO */
 
 .cabecalho {
     background-color: #0e1b3f;
@@ -112,17 +75,14 @@ code {
     gap: 16px;
 }
 
-/* --- Logo --- */
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Agora e a logo em SVG, nao mais o texto </> num quadrado vermelho.
-   O SVG ja traz o proprio fundo e contorno, entao aqui so se define
-   o tamanho. display: block tira o espaco fantasma que o navegador
-   reserva embaixo de imagens em linha e desalinharia o nome ao lado. */
+/* display: block tira o espaco fantasma abaixo da imagem em linha,
+   que desalinharia o nome ao lado */
 .logo__icone {
     display: block;
     width: 44px;
@@ -141,6 +101,18 @@ code {
     letter-spacing: 0.5px;
 }
 
+/* Como link, herda o branco do cabecalho em vez do vermelho padrao;
+   align-self impede que ele estique pela coluna toda */
+a.logo__nome {
+    color: inherit;
+    align-self: flex-start;
+}
+
+a.logo__nome:hover {
+    color: #ff5a5a;
+    text-decoration: none;
+}
+
 .logo__slogan {
     font-size: 12px;
     color: #95a3ba;
@@ -148,9 +120,8 @@ code {
     text-transform: uppercase;
 }
 
-/* --- Menu de navegacao --- */
 .menu__lista {
-    list-style: none;   /* tira os marcadores: e um menu, nao uma lista de leitura */
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -171,12 +142,8 @@ code {
 }
 
 
-/* ------------------------------------------------------------
-   4. ARTIGO
-   ------------------------------------------------------------ */
+/* 4. ARTIGO */
 
-/* No tema escuro a sombra quase nao aparece, entao quem separa o
-   artigo do fundo e a borda azul. */
 .artigo {
     background-color: #0e1b3f;
     border: 1px solid #1f3d73;
@@ -186,7 +153,6 @@ code {
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
-/* --- Cabecalho do artigo --- */
 .artigo__categoria {
     display: inline-block;
     background-color: #3d0c16;
@@ -228,7 +194,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* --- Titulos internos --- */
 h2 {
     font-size: 27px;
     color: #ffffff;
@@ -251,7 +216,6 @@ h4 {
     margin-bottom: 10px;
 }
 
-/* --- Paragrafos e secoes --- */
 p {
     margin-bottom: 18px;
     text-align: justify;
@@ -261,7 +225,6 @@ p {
     margin-top: 45px;
 }
 
-/* --- Linha divisoria tematica: faixa vermelho -> azul --- */
 hr {
     border: none;
     height: 3px;
@@ -270,7 +233,6 @@ hr {
     margin: 45px 0;
 }
 
-/* --- Citacao --- */
 .citacao {
     background-color: #16305f;
     border-left: 5px solid #c8102e;
@@ -292,10 +254,8 @@ hr {
     color: #95a3ba;
 }
 
-/* --- Listas do artigo --- */
 .lista-sinais,
 .lista-passos {
-    /* o padding empurra os marcadores para dentro do texto */
     padding-left: 26px;
     margin-bottom: 20px;
 }
@@ -315,16 +275,12 @@ hr {
 }
 
 
-/* ------------------------------------------------------------
-   5. IMAGENS E FIGURAS
-   ------------------------------------------------------------ */
+/* 5. IMAGENS E FIGURAS */
 
 .figura {
     margin: 32px 0;
 }
 
-/* max-width: 100% faz a imagem encolher junto com a tela,
-   e height: auto mantem a proporcao original. */
 .figura img {
     width: 100%;
     max-width: 100%;
@@ -343,11 +299,9 @@ hr {
 }
 
 
-/* ------------------------------------------------------------
-   6. BLOCOS ESPECIAIS
-   ------------------------------------------------------------ */
+/* 6. BLOCOS ESPECIAIS */
 
-/* --- Caixa de destaque: mais ESCURA que o artigo, parece recuada --- */
+/* Mais escura que o artigo, para parecer recuada */
 .destaque {
     background-color: #06102a;
     color: #dce3ec;
@@ -366,7 +320,6 @@ hr {
     margin-bottom: 0;
 }
 
-/* --- Grade de dois cartoes lado a lado --- */
 .comparacao__grade {
     display: flex;
     flex-wrap: wrap;
@@ -382,8 +335,7 @@ hr {
     padding: 20px;
 }
 
-/* O segundo cartao (o do algoritmo) recebe a faixa azul,
-   fechando o contraste vermelho/azul da dupla. */
+/* O cartao do algoritmo recebe a faixa azul, fechando o contraste da dupla */
 .cartao:last-child {
     border-top-color: #2b5aa8;
 }
@@ -401,7 +353,6 @@ hr {
     margin-bottom: 12px;
 }
 
-/* --- Grupo Optimus (equipe) --- */
 .equipe__grade {
     display: flex;
     flex-wrap: wrap;
@@ -419,8 +370,7 @@ hr {
     text-align: center;
 }
 
-/* Foto do integrante recortada em circulo.
-   O object-fit: cover preenche o circulo sem distorcer o rosto. */
+/* A foto quadrada vira circulo aqui; object-fit preenche sem distorcer */
 .equipe__avatar {
     width: 72px;
     height: 72px;
@@ -454,9 +404,7 @@ hr {
 }
 
 
-/* ------------------------------------------------------------
-   7. RODAPE
-   ------------------------------------------------------------ */
+/* 7. RODAPE */
 
 .rodape {
     background-color: #0e1b3f;
@@ -525,9 +473,7 @@ hr {
 }
 
 
-/* ------------------------------------------------------------
-   8. RESPONSIVIDADE: ajustes para telas pequenas (celular)
-   ------------------------------------------------------------ */
+/* 8. RESPONSIVIDADE (celular) */
 
 @media (max-width: 600px) {
 

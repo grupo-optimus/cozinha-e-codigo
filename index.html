@@ -8,18 +8,12 @@
     <meta name="author" content="Grupo Optimus">
     <title>O que os programadores aprendem com os cozinheiros | Optimus</title>
 
-    <!-- Icone que aparece na aba do navegador -->
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-
-    <!-- Folha de estilo externa: toda a estilizacao fica no style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ============================================================
-         TOPO DA PAGINA: logo, nome do blog e menu de navegacao
-         ============================================================ -->
     <header class="cabecalho">
         <div class="container cabecalho__interno">
 
@@ -27,12 +21,11 @@
                 <img class="logo__icone" src="img/logo.svg"
                      alt="Logo do Grupo Optimus">
                 <div class="logo__textos">
-                    <span class="logo__nome">Optimus</span>
+                    <a class="logo__nome" href="https://grupo-optimus.github.io/">Optimus</a>
                     <span class="logo__slogan">Cozinha &amp; Código</span>
                 </div>
             </div>
 
-            <!-- Menu de navegacao: cada item leva a uma secao real desta pagina -->
             <nav class="menu">
                 <ul class="menu__lista">
                     <li><a href="#inicio">Início</a></li>
@@ -46,19 +39,13 @@
     </header>
 
 
-    <!-- ============================================================
-         CONTEUDO PRINCIPAL
-         ============================================================ -->
     <main class="container">
 
-        <!-- O texto completo do artigo fica dentro da tag <article> -->
         <article class="artigo">
 
-            <!-- Cabecalho interno do artigo -->
             <header class="artigo__topo" id="inicio">
                 <p class="artigo__categoria">Fundamentos de Programação</p>
 
-                <!-- O <h1> e exclusivo do titulo principal da pagina -->
                 <h1>O que os programadores aprendem com os cozinheiros</h1>
 
                 <p class="artigo__resumo">
@@ -73,7 +60,6 @@
                 </div>
             </header>
 
-            <!-- Toda imagem do conteudo fica agrupada em uma <figure> -->
             <figure class="figura">
                 <img src="img/capa-receita-algoritmo.svg"
                      alt="Ilustração de um cartão de receita ao lado de um editor de código, lado a lado, ligados por um sinal de igual.">
@@ -95,10 +81,8 @@
                 esse nome.
             </p>
 
-            <!-- Linha divisoria tematica separando a introducao do desenvolvimento -->
             <hr>
 
-            <!-- ---------- SECAO 1 ---------- -->
             <section class="secao">
                 <h2>Receita é algoritmo, sem eufemismo</h2>
 
@@ -117,8 +101,6 @@
                     "ingredientes".
                 </p>
 
-                <!-- Uso consciente do <br>: separa o autor da obra dentro da mesma
-                     citacao, sem criar um novo bloco de texto -->
                 <blockquote class="citacao">
                     <p>
                         "Mise-en-place is the religion of all good cooks."
@@ -135,7 +117,6 @@
                 </p>
             </section>
 
-            <!-- ---------- SECAO 2 ---------- -->
             <section class="secao" id="conceitos">
                 <h2>Os ingredientes são as variáveis do prato</h2>
 
@@ -171,7 +152,6 @@
 
                 <h4>Sinais de que sua receita — ou seu código — vai dar errado</h4>
 
-                <!-- Lista NAO ORDENADA: itens sem ordem de importancia -->
                 <ul class="lista-sinais">
                     <li>Ingrediente medido "a olho", sem anotar a quantidade real usada;</li>
                     <li>Passo pulado porque "acha que lembra" de cor;</li>
@@ -182,7 +162,6 @@
                 </ul>
             </section>
 
-            <!-- ---------- SECAO 3 ---------- -->
             <section class="secao" id="comparacao">
                 <h2>Bolo de chocolate vs. ordenar uma lista: passo a passo lado a lado</h2>
 
@@ -254,8 +233,6 @@
 
             <hr>
 
-            <!-- ---------- SECAO 4: GRUPO OPTIMUS ---------- -->
-            <!-- As fotos sao quadradas (300x300) e o CSS as recorta em circulo -->
             <section class="secao equipe" id="grupo">
                 <h2>Grupo Optimus</h2>
 
@@ -263,14 +240,11 @@
                     Este artigo foi produzido pelo Grupo Optimus como atividade acadêmica.
                 </p>
 
-                
-                
-                <!-- Estrutura do Carrossel Centralizado -->
+                <!-- Carrossel: so o primeiro slide nasce visivel; o carrossel.js
+                     alterna o display dos .meu-slide -->
                 <div id="carrossel" style="position: relative; max-width: 350px; margin: 0 auto; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                    <!-- Botão Anterior -->
                     <button onclick="mudarSlide(-1)" style="position:absolute; left:0; z-index:10; cursor:pointer; background:none; border:none; font-size:35px; color:#fff;">&#10094;</button>
-                    
-                    <!-- Slides Individuais (display:none ou flex, com margin auto para centralizar no flex-container) -->
+
                     <div class="meu-slide equipe__card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin: 0 auto;">
                         <img class="equipe__avatar" src="img/andre-castelhano.jpg" alt="Foto de André" style="width: 110px; height: 110px;">
                         <p class="equipe__nome" style="font-size: 13px;">André Luis Castelhano</p>
@@ -297,7 +271,6 @@
                         <p class="equipe__papel" style="font-size: 12px; margin-top:5px;">Mentora</p>
                     </div>
 
-                    <!-- Botão Próximo -->
                     <button onclick="mudarSlide(1)" style="position:absolute; right:0; z-index:10; cursor:pointer; background:none; border:none; font-size:35px; color:#fff;">&#10095;</button>
                 </div>
 
@@ -308,9 +281,6 @@
     </main>
 
 
-    <!-- ============================================================
-         RODAPE: identificacao, redes sociais e direitos autorais
-         ============================================================ -->
     <footer class="rodape">
         <div class="container rodape__interno">
 
@@ -320,8 +290,6 @@
                     <span class="logo__nome">Optimus</span>
                 </div>
 
-                <!-- Uso consciente do <br>: linhas de um bloco de identificacao,
-                     no mesmo formato de um endereco postal -->
                 <p class="rodape__identificacao">
                     Grupo Optimus<br>
                     Artigo produzido como atividade acadêmica<br>
@@ -331,8 +299,6 @@
 
             <div class="rodape__coluna">
                 <h5>Redes sociais</h5>
-                <!-- Links externos: target="_blank" abre em nova aba e
-                     rel="noopener" impede que a pagina aberta acesse esta -->
                 <ul class="rodape__redes">
                     <li>
                         <a href="https://github.com/kauoo/optimus"
@@ -356,7 +322,6 @@
         </div>
     </footer>
 
-    <!-- Importando script externo do carrossel -->
     <script src="js/carrossel.js"></script>
 </body>
 
